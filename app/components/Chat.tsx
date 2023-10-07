@@ -56,7 +56,7 @@ const Chat = () => {
           {messages.length > 0
           ? messages.map(m => (
               <div key={m.id} className="chat-line">
-                <span style={{color: userColors[m.role]}}>{m.role === 'user' ? 'User: ' : '⚡️Last Codebender: '}</span>
+                <span style={{color: userColors[m.role]}}>{m.role === 'user' ? 'User: ' : 'AISERR: '}</span>
                 {m.content}
               </div>
             ))
@@ -80,9 +80,6 @@ const Chat = () => {
         <input name="input-field" placeholder="Say anything" onChange={handleInputChange} value={input} />
         <button type="submit" className="mainButton" disabled={loading} onClick={() => setSubmitType('text')}>
           TEXT
-        </button>
-        <button type="submit" className="secondaryButton" disabled={loading} onClick={() => setSubmitType('image')}>
-          IMAGE
         </button>
       </form>
     </>
